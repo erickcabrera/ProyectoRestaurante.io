@@ -12,4 +12,4 @@ _Repositorio para el desarrollo de una pagína web para un restaurante
   Esta licencia permite que otros distribuyan, mezclen, adapten y construyan sobre su trabajo, incluso comercialmente, siempre que le reconozcan la creación original. Esta es la     licencia más complaciente que se ofrece. Recomendado para la máxima difusión y uso de materiales con licencia.
 ## Enlaces de interes
 * [trello] https://trello.com/b/Y2M2dB6Y/proyecto-de-c%C3%A1tedra-lic
-* [mockups] 
+* [mockups] https://www.figma.com/file/0ZXy22iWWujjF7JvbwQOCp/ProyectoLic?node-id=0%3A1

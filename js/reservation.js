@@ -28,11 +28,32 @@ window.onload = () => {
             }
         }
 
-        //llamada a función para guardar los datos
-        addNewReservation(formData)
+        //validamos que el formulario este completo
+        if (validar()) {
+            //llamada a función para guardar los datos
+            addNewReservation(formData)
 
-        //llamada a función para limpiar formulario
-        cleanForm(document.getElementById("reservation-form-data"));
+            //llamada a función para limpiar formulario
+            cleanForm(document.getElementById("reservation-form-data"));   
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Debe de completar el formulario para hacer su reservación',
+                confirmButtonColor: '#262626',
+                confirmButtonText: 'Aceptar'
+            })
+        }
+    });
+
+    //evento para mostrar reservaciones en responsive
+    document.querySelector('.show-reservations').addEventListener('click', () => {
+        document.querySelector('.reservations').classList.toggle('reservations-show');
+    });
+
+    //evento para ocultar reservaciones en responsive
+    document.querySelector('.btn-close-reservations').addEventListener('click', () => {
+        document.querySelector('.reservations').classList.toggle('reservations-show');
     });
 }
 
@@ -78,4 +99,42 @@ function cleanForm(form) {
     for (const iterator of document.getElementsByClassName('btnCant')) {
         iterator.classList.remove('active');
     }
+}
+
+function validar() {
+    let validated = true;
+    let btnSelected = false;
+
+    //evaluamos si los campos poseen datos
+    if (
+        document.getElementById('idname').value === '' || 
+        document.getElementById('iddate').value === '' || 
+        document.getElementById('idtime').value === ''
+    ) {
+        //convertimos la variable a false para señalar que no esta validado
+        validated = false;
+    }
+    
+    //recorremos los botones de cantidad para corroborar que uno esta activado
+    for (const iterator of document.getElementsByClassName('btnCant')) {
+        if (!btnSelected)
+            btnSelected = iterator.classList.contains('active');
+        else
+            break;
+    }
+    
+    if (!btnSelected) {
+        validated = false;
+    }
+
+    //validamos que algún radiobotton este seleccionado
+    if (
+        !document.getElementById('idchbx1').checked &&
+        !document.getElementById('idchbx2').checked &&
+        !document.getElementById('idchbx3').checked
+    ) {
+        validated = false;
+    }
+
+    return validated;
 }

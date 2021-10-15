@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/reservation.css">
 
@@ -17,130 +20,109 @@
     <div class="mainContent">
         <div class="reservation-container">
             <div class="reservation-form">
-                <h1 class="reservation-title">RESERVAR</h1>
-                <hr class="reservation-line">
-                <br>
+                <div>
+                    <h1 class="reservation-title">RESERVAR</h1>
+                    <hr class="reservation-line">
+                    <br>
+                </div>
                 <div class="form-data">
-                    <form action="">
+                    <form id="reservation-form-data">
                         <label for="idname" class="form-label">Nombre:</label><br>
-                        <input type="text" name="" id="idname" class="inputform" placeholder="Ingrese su nombre">
+                        <input type="text" name="nombre" id="idname" class="inputform" placeholder="Ingrese su nombre" required>
                         <label for="iddate" class="form-label">Fecha:</label><br>
-                        <input type="date" name="" id="iddate" class="inputform" placeholder="Ingrese su fecha">
+                        <input type="date" name="fecha" id="iddate" class="inputform" placeholder="Ingrese su fecha" required>
                         <label for="idtime" class="form-label">Hora:</label><br>
-                        <input type="time" name="" id="idtime" class="inputform" placeholder="Ingrese su hora">
+                        <input type="time" name="hora" id="idtime" class="inputform" placeholder="Ingrese su hora" required>
                         <label for="" class="form-label">Cantidad de personas:</label><br>
                         <div class="inputform inputButtons">
-                            <button>1</button>
-                            <button>2</button>
-                            <button>3</button>
-                            <button>4</button>
-                            <button>5</button>
-                            <button>6</button>
-                            <button style="border-right: none;">7</button>
+                            <button type="button" class="btnCant" value="1">1</button>
+                            <button type="button" class="btnCant" value="2">2</button>
+                            <button type="button" class="btnCant" value="3">3</button>
+                            <button type="button" class="btnCant" value="4">4</button>
+                            <button type="button" class="btnCant" value="5">5</button>
+                            <button type="button" class="btnCant" value="6">6</button>
+                            <button type="button" style="border-right: none;" class="btnCant" value="7">7</button>
                         </div>
                         <label for="" class="form-label">Tipo de mesa:</label><br>
                         <div class="rbtnContainer">
-                            <input type="radio" name="rbtnMesa" id="idchbx1">
-                            <label for="idchbx1" class="form-label">Lorem ipsum dolor</label>
-                            <input type="radio" name="rbtnMesa" id="idchbx2">
-                            <label for="idchbx2" class="form-label">Lorem ipsum dolor</label>
-                            <input type="radio" name="rbtnMesa" id="idchbx3">
-                            <label for="idchbx3" class="form-label">Lorem ipsum dolor</label>
+                            <input type="radio" name="rbtnMesa" value="Mesa de salón general" id="idchbx1" required>
+                            <label for="idchbx1" class="form-label">Mesa de salón general</label><br>
+                            <input type="radio" name="rbtnMesa" value="Mesa en salón privado" id="idchbx2" required>
+                            <label for="idchbx2" class="form-label">Mesa en salón privado</label><br>
+                            <input type="radio" name="rbtnMesa" value="Mesa en la terraza" id="idchbx3" required>
+                            <label for="idchbx3" class="form-label">Mesa en la terraza</label>
                         </div>
                     </form>
                 </div>
                 <div class="reservation-btn-container">
                     <button class="reservation-btn">HACER RESERVACIÓN</button>
+                    <button class="show-reservations">
+                        <span class="material-icons">
+                            book
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>
         <div class="reservations">
-            <h1 class="maintitle">RESERVACIONES</h1>
-            <div class="reservations-table">
-                <div class="table-head">
+            <div class="reservations-container">
+                <button class="btn-close-reservations">
                     <span class="material-icons">
-                        history
+                        close
                     </span>
-                    <h3>Historial de reservaciones</h3>
-                </div>
-                <div class="reservation-item">
-                    <img src="../img/restaurantfoodicon.jpg" alt="food icon">
-                    <div class="reservation-info">
-                        <span class="reservation-item-title">
-                            Reservación mesa lorem.
+                </button>
+                <h1 class="maintitle">RESERVACIONES</h1>
+                <div class="reservations-table" id="tableOfReservations">
+                    <div class="table-head">
+                        <span class="material-icons">
+                            history
                         </span>
-                        <span class="reservation-item-time">
-                            10:30 AM
-                        </span>
+                        <h3>Historial de reservaciones</h3>
                     </div>
-                    <div class="reservation-info secundary-info">
-                        <span class="reservation-item-date">
-                            23/11/2021
-                        </span>
-                        <span class="reservation-item-status">
-                            Pendiente
-                        </span>
+                    <div class="reservation-item">
+                        <img src="../img/restaurantfoodicon.jpg" alt="food icon">
+                        <div class="reservation-info">
+                            <span class="reservation-item-title">
+                                Reservación mesa lorem.
+                            </span>
+                            <span class="reservation-item-time">
+                                10:30 AM
+                            </span>
+                        </div>
+                        <div class="reservation-info secundary-info">
+                            <span class="reservation-item-date">
+                                23/11/2021
+                            </span>
+                            <span class="reservation-item-status">
+                                Pendiente
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="reservation-item">
-                    <img src="../img/restaurantfoodicon.jpg" alt="food icon">
-                    <div class="reservation-info">
-                        <span class="reservation-item-title">
-                            Reservación mesa lorem.
-                        </span>
-                        <span class="reservation-item-time">
-                            10:30 AM
-                        </span>
-                    </div>
-                    <div class="reservation-info secundary-info">
-                        <span class="reservation-item-date">
-                            23/11/2021
-                        </span>
-                        <span class="reservation-item-status">
-                            Pendiente
-                        </span>
-                    </div>
-                </div>
-                <div class="reservation-item">
-                    <img src="../img/restaurantfoodicon.jpg" alt="food icon">
-                    <div class="reservation-info">
-                        <span class="reservation-item-title">
-                            Reservación mesa lorem.
-                        </span>
-                        <span class="reservation-item-time">
-                            10:30 AM
-                        </span>
-                    </div>
-                    <div class="reservation-info secundary-info">
-                        <span class="reservation-item-date">
-                            23/11/2021
-                        </span>
-                        <span class="reservation-item-status">
-                            Pendiente
-                        </span>
-                    </div>
-                </div>
-                <div class="reservation-item">
-                    <img src="../img/restaurantfoodicon.jpg" alt="food icon">
-                    <div class="reservation-info">
-                        <span class="reservation-item-title">
-                            Reservación mesa lorem.
-                        </span>
-                        <span class="reservation-item-time">
-                            10:30 AM
-                        </span>
-                    </div>
-                    <div class="reservation-info secundary-info">
-                        <span class="reservation-item-date">
-                            23/11/2021
-                        </span>
-                        <span class="reservation-item-status">
-                            Pendiente
-                        </span>
+                    <div class="reservation-item">
+                        <img src="../img/restaurantfoodicon.jpg" alt="food icon">
+                        <div class="reservation-info">
+                            <span class="reservation-item-title">
+                                Reservación mesa lorem.
+                            </span>
+                            <span class="reservation-item-time">
+                                10:30 AM
+                            </span>
+                        </div>
+                        <div class="reservation-info secundary-info">
+                            <span class="reservation-item-date">
+                                23/11/2021
+                            </span>
+                            <span class="reservation-item-status">
+                                Pendiente
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/reservation.js"></script>
 </body>
 </html>

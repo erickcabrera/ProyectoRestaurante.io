@@ -34,13 +34,15 @@ body {
 .reservation-form {
     width: 500px;
     height: 95%;
+    max-height: 650px;
     background-color: rgba(67, 35, 9, 0.71);
     border-radius: 70px;
     box-shadow: 0px 2px 8px 6px rgba(0, 0, 0, 0.25);
+    position: relative;
 }
 
 .reservation-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif; 
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -74,9 +76,15 @@ body {
 
 .reservation-btn-container {
     position: absolute;
-    bottom: 50px;
-    transform: translate(calc(50% - 50px));
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 80px;
     transition: 0.5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .reservation-btn:hover {
@@ -85,10 +93,33 @@ body {
     background-color: #e4e4e4;
 }
 
+.reservation-btn:active {
+    background-color: #262626;
+    color: white;
+    transform: scale(0.8);
+}
+
 .form-data {
     width: 100%;
-    height: 70%;
+    height: calc(100% - 164px); /*164px equivale a la altura del div del boton y del titulo de form sumados*/
     padding: 0px 70px;
+    overflow-y: scroll;
+}
+
+/* form-data scroll bar style*/
+.form-data::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.form-data::-webkit-scrollbar-thumb {
+    background-color: #e4e4e4;
+    border-radius: 4px;
+}
+
+.form-data::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .form-label {
@@ -133,6 +164,11 @@ body {
     transition: 0.25s;
 }
 
+.active {
+    background-color: #262626;
+    color: white;
+}
+
 .rbtnContainer {
     margin-top: 5px;
     margin-bottom: 15px;
@@ -143,15 +179,44 @@ body {
     width: 50%;
 }
 
+.reservations-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.reservations-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.reservations-container::-webkit-scrollbar-thumb {
+    background-color: #61330e;
+    border-radius: 4px;
+}
+
+.reservations-container::-webkit-scrollbar-thumb:hover {
+    background-color: #432309;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 .maintitle {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 40px;
     line-height: 49px;
     text-align: center;
     color: #262626;
     margin: 20px 0px;
+}
+
+.show-reservations {
+    display: none;
+}
+
+.btn-close-reservations {
+    display: none;
 }
 
 .reservations-table {
@@ -236,22 +301,20 @@ body {
     color: #432309;
 }
 
+/* sweetalert */
+.swal2-popup h2, .swal2-modal h2, .swal2-html-container {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
 @media screen and (max-width: 1049px) {
     .reservation-form {
         width: 350px;
         border-radius: 50px;
     }
-    
-    .reservation-btn {
-        width: 250px;
-    }
-    
-    .reservation-btn-container {
-        transform: translate(calc(50% - 75px));
-    }
-    
+
     .form-data {
-        padding: 0px 30px;
+        padding: 0px 25px;
     }
     
     .rbtnContainer {
@@ -259,10 +322,17 @@ body {
         margin-bottom: 15px;
     }
 
+    .reservation-btn {
+        width: 250px;
+        height: 35px;
+        font-size: 15px;
+        line-height: 19px;
+    }
+
     /* tabla de reservaciones */
     .reservation-item-title, .reservation-item-date {
         font-size: 15px;
-        line-height: 20px;
+        line-height: 15px;
     }
     
     .reservation-item-time {
@@ -273,5 +343,106 @@ body {
     .reservation-item-status {
         font-size: 12px;
         line-height: 16px;
+    }
+
+    .maintitle {
+        font-size: 30px;
+    }
+    
+    .table-head h3 {
+        font-size: 15px;
+        line-height: 19px;
+        font-weight: normal;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .mainContent {
+        display: block;
+        position: relative;
+    }
+
+    .reservation-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .show-reservations {
+        display: block;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 86.5px;
+        border: none;
+        font-family: Source Sans Pro;
+        font-weight: bold;
+        color: #432309;
+        transition: 0.5s;
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+        line-height: 19px;
+        margin-left: 10px;
+    }
+
+    .show-reservations:hover {
+        transition: 0.5s;
+        transform: scale(1.05);
+        background-color: #e4e4e4;
+    }
+
+    .show-reservations:active {
+        background-color: #262626;
+        color: white;
+        transform: scale(0.8);
+    }
+
+    .reservations {
+        display: none;
+        z-index: 2;
+    }
+
+    .reservations-show {
+        display: block;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .reservations-container {
+        background-image: url(../img/bg-textura.png);
+        background-repeat: repeat;
+    }
+
+    .btn-close-reservations {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 86.5px;
+        border: none;
+        font-family: Source Sans Pro;
+        font-weight: bold;
+        color: #432309;
+        transition: 0.5s;
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+        line-height: 19px;
+    }
+
+    .btn-close-reservations:hover {
+        transition: 0.5s;
+        transform: scale(1.05);
+        background-color: #e4e4e4;
+    }
+
+    .btn-close-reservations:active {
+        background-color: #262626;
+        color: white;
+        transform: scale(0.8);
     }
 }

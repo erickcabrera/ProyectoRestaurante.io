@@ -41,7 +41,17 @@ header .menu
 {
     width: 100%;
     text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
+
+header .menu-logo {
+    width: 60px;
+    height: 60px;
+}
+
 header .menu a
 {
     color: #fff;

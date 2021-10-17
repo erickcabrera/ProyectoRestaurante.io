@@ -29,3 +29,4 @@ Esta licencia permite que otros distribuyan, mezclen, adapten y construyan sobre
 - [trello] https://trello.com/b/Y2M2dB6Y/proyecto-de-c%C3%A1tedra-lic
 - [mockups] https://www.figma.com/file/0ZXy22iWWujjF7JvbwQOCp/ProyectoLic?node-id=0%3A1
 - [Link_de_pagina_web] https://erickcabrera.github.io/ProyectoRestaurante.io/
+- [Video_Fase_2] https://drive.google.com/file/d/156wmWbPlRfIZwLeR3JZlo4Y9_x8uqWCn/view?usp=sharing

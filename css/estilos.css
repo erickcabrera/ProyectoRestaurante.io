@@ -459,3 +459,32 @@ box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
    
 }
 /* fin estilos de seccion nosotros */
+
+
+/*mediaqueries para responsive desing*/
+@media screen and (max-width: 620px) {
+    .menu-secundario-container {
+        grid-auto-rows: 165px;
+        grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    }
+
+    .menu-secundario-item {
+        width: 400px;
+        height: 125px;
+    }
+
+    .menu-secundario-item img {
+        width: 200px;
+        height: 125px;
+    }
+
+    .menu-item-info {
+        width: 200px;
+        padding: 0px 0px 0px 15px;
+        font-size: 12px;
+    }
+
+    .menu-item-title {
+        font-size: 18px;
+    }
+}

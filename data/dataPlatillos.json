@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Brochetas de pato",
+        "description": "Brochetas de pechuga de pato con cebollas caramelizadas y salsa oporto.",
+        "price": 9.00,
+        "img": "plato1.png"
+    },
+    {
+        "name": "Brisket con salsa de pimientos",
+        "description": "Brisket con salsa de pimientos, acompañado de pechuga de pollo rellena de calabaza y queso manchego.",
+        "price": 12.00,
+        "img": "plato2.png"
+    },
+    {
+        "name": "Filete mignon con salsa bernesa",
+        "description": "Filete bien sellado y jugoso por dentro acompañado de una salsa bernesa a base de huevo y vinagre",
+        "price": 15.00,
+        "img": "plato3.png"
+    },
+    {
+        "name": "Mejillones en salsa de vino",
+        "description": "Mejillones en salsa de vino blanco seco de buena calidad, perejil, laurel y vegetales.",
+        "price": 8.00,
+        "img": "plato4.png"
+    },
+    {
+        "name": "Rack de cordero",
+        "description": "Costillitas ahumadas de cordero con salsa de guajillo de piña, berenjenas a la parrilla, cebolla roja, espárragos.",
+        "price": 12.00,
+        "img": "plato5.png"
+    },
+    {
+        "name": "Pollo asado con chimichurri",
+        "description": "Pollo asado marinado en naranjas con salsa chimichurri de aceitunas acompañado de verduras a la parrilla.",
+        "price": 8.00,
+        "img": "plato6.png"
+    }
+]

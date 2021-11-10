@@ -18,7 +18,7 @@ function getPlatillosData() {
   //usos de ajax para extraer los datos
   $.ajax({
     type: "GET",
-    url: "../data/dataPlatillos.json",
+    url: "https://erickcabrera.github.io/ProyectoRestaurante.io/data/dataPlatillos.json",
     success: function (response) {
       renderPlatillos(response);
     }

@@ -491,16 +491,16 @@ box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
     left: 120px;
     top: 120px;
     position: relative;
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-family: "Open Sans";
 }
 .titulo-ubicacion2{
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 18px;
+   
     text-align: left;
     left: 120px;
     top: 120px;
     position: relative;
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-family: "Open Sans Pro";
 }
 /* fin ubivacion*/
 
@@ -518,10 +518,10 @@ box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
 
 .footer .box-container .box h3{
     padding:.5rem 0;
-    font-size: 1.5rem;
+    font-size: 20px;
     margin-left: 10px;
     color:rgb(231, 228, 228);
-
+    font-family: "Open Sans";
 
 }
 
@@ -529,8 +529,9 @@ box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
     display: block;
     margin-left: 10px;
     padding:.5rem 0;
-    font-size: 1rem;
+    font-size: 15px;
     color:rgb(231, 228, 228);
+   
 }
 
 .footer .box-container .box a:hover{

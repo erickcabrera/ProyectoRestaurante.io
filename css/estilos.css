@@ -339,7 +339,6 @@ header .textos h3
 .container2{
     width: 100%;
     max-width: 1600px;
-    height: 600px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -460,6 +459,129 @@ box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
 }
 /* fin estilos de seccion nosotros */
 
+/* inicio ubicacion */
+.contact{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ubicacion {
+    display: flex;
+    flex-direction: row;
+    height: 450px;
+    padding: 20px;
+}
+
+.titles-ubicacion {
+    flex-grow: 1;
+    padding-top: 20px;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.row{
+    flex-grow: 2;
+    padding: 0px 4%
+}
+
+.titulo-ubicacion{
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    font-family: "Open Sans";
+}
+
+.titulo-ubicacion2 {
+    font-size: 18px;
+    text-align: center;
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+}
+
+/* fin ubivacion*/
+
+/* estilos footer */
+
+.footer .box-container {
+   display: flex;
+   flex-direction: column;
+   background-color: #262626;
+}
+
+.footer .footer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.footer .footer-info div {
+    width: calc(85%/3);
+    padding-left: 15px
+}
+
+.footer .box-container .box h3{
+    padding: 1.8rem 0px 10px 0px;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(231, 228, 228);
+    font-family: "Open Sans";
+
+}
+
+.footer .box-container .box a{
+    display: inline;
+    margin-left: 10px;
+    font-size: 15px;
+    color: rgb(231, 228, 228);
+   margin: 10px 10px
+}
+
+.footer .box-container .box p{
+    display: block;
+    margin: 10px 0px;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgb(231, 228, 228);
+    font-family: "Source Sans Pro";
+   
+}
+
+.box-days {
+    font-weight: 500 !important;
+}
+
+.footer .box-container .box a:hover{
+    color:rgb(231, 228, 228);
+    text-decoration: underline;
+}
+
+.footer .credit{
+   
+    text-align: center;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    font-size: 0.9rem;
+    color: rgb(231, 228, 228);
+    padding:.7rem;
+    margin-top: 1.5rem;
+    background-color: black;
+    width: 100%;
+   
+ 
+}
+
+.footer .credit span{
+    color:rgb(231, 228, 228);
+}
+/* fin estilos footer */
+
 
 /*mediaqueries para responsive desing*/
 @media screen and (max-width: 620px) {
@@ -486,5 +608,39 @@ box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
 
     .menu-item-title {
         font-size: 18px;
+    }
+    
+    
+    .ubicacion {
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        padding: 20px;
+    }
+    
+    .titles-ubicacion {
+        flex-grow: 0;
+        padding-top: 20px;
+        margin-bottom: 10px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer .footer-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer .footer-info div {
+        width: 100%;
+        padding-left: 15px
+    }
+    
+    .footer .footer-info div p {
+        text-align: center;
+    }
+    
+    .footer .box-container .box h3{
+        text-align: center;
     }
 }

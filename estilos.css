@@ -1,0 +1,589 @@
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;  
+    font-size: 16px;
+    background-image: url(../img/bg-textura.png);
+    background-repeat: repeat;
+}
+
+.contenedor
+{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;  
+}
+
+/* ---------HEADER------------*/
+header
+{
+    width: 100%;
+    background: url("../img/bg.jpg") #281a06;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 0;
+}
+header .contenedor
+{
+    position: relative;
+    height: 700px;
+}
+
+header .menu
+{
+    width: 100%;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu-logo {
+    width: 100px;
+    height: 100px;
+}
+
+header .menu a
+{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+    margin: 40px 20px;
+    text-decoration: none;
+    position: relative;
+}
+header .menu a:hover
+{
+    text-decoration: underline;
+}
+header .textos
+{
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -52px;
+}
+header .textos .nombre
+{
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0;
+}
+header .textos .nombre span
+{
+    font-weight: 300;
+}
+header .textos h3
+{
+    margin: 0;
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+}
+
+/* ---------MAIN------------*/
+.main
+{
+    background: url("../img/bg-textura.png");
+    background-repeat: repeat;
+}
+.main .acerca-de .contenedor
+{
+    overflow: visible;
+    position: relative;
+}
+.main .acerca-de .foto
+{
+    width: 80%;
+    position: absolute;
+    left: 0;
+    top:-50px;
+    z-index: 0;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.35);
+}
+.main .acerca-de .foto img
+{
+    vertical-align: top;
+    width: 100%;
+}
+
+.main .acerca-de article
+{
+    background: #fff;
+    padding: 40px;
+    width: 50%;
+    position: relative;
+    top:150px;
+    float: right;
+    z-index: 1;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.35);
+}
+.main .acerca-de article h3
+{
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+.main .acerca-de article p
+{
+    line-height: 28px;
+    margin-bottom: 15px;
+}
+
+.main .menu-comida
+{
+    padding-top: 570px;
+    margin-bottom: 50px;
+}
+.main .menu-comida .titulo
+{
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    margin: 80px 0px 40px 0px;
+}
+.main .menu-comida .contenedor-menu,
+.main .menu-comida .contenedor-menu2
+{
+    border: 1px solid #000;
+    background: transparent;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.main .menu-comida article
+{
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+.main .menu-comida .categoria
+{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.main .menu-comida .platillo
+{
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 4px dotted #000;
+    overflow: hidden;
+}
+.main .menu-comida .nombre
+{
+    font-size: 20px;
+    margin-bottom: 15px;
+    float: left;
+}
+.main .menu-comida .precio
+{
+    font-size: 20px;
+    margin-bottom: 15px;
+    float: right;
+}
+.main .menu-comida .descipcion
+{
+    font-size: 16px;
+    color: #676767;
+    clear: both;
+}
+
+.titulo-galeria{
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    margin: 50px 0px 15px 0px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.main .galeria
+{
+    overflow: hidden;
+}
+
+.main .galeria .foto
+{
+    width: 25%;
+    float: left;
+}
+
+.main .galeria .foto img
+{
+    width: 100%;
+    vertical-align: top;
+    opacity: .7;
+}
+
+.main .galeria .foto img:hover
+{
+    opacity: 1;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+/* estilos del segundo menú */
+.titulo-menu{
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    margin: 80px 0px 15px 0px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.h3-menu{
+    font-family: "Source Sans Pro"; 
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: normal;
+    text-align: center;
+    margin: 20px 0;
+    color:#404040
+}
+
+.main .menu-secundario
+{
+    margin-bottom: 50px;
+}
+
+.menu-secundario-container
+{
+    display: grid;
+    grid-auto-rows: 190px;
+    grid-template-columns: repeat(auto-fill, minmax(595px, 1fr));
+    justify-items: center;
+    align-items: center;
+}
+
+.menu-secundario-item {
+    width: 575px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.menu-item-price {
+    position: absolute;
+    z-index: 2;
+    bottom: 10px;
+    left: 10px;
+    width: 50px;
+    background-color: white;
+    color: #262626;
+    font-size: 20px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.menu-secundario-item img {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+}
+
+.menu-item-info 
+{
+    width: calc(100% - 240px);
+    padding: 10px 5px 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    color: #262626;
+}
+
+.menu-item-title {
+    font-size: 20px;
+}
+
+
+/* Inicio estilos del loader */
+.loader-contenedor{
+    position: fixed;
+    top:0; left:0;
+    height:100%; 
+    width:100%;
+    z-index: 10000;
+    background:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loader-contenedor img{
+    width:35rem;
+}
+
+.loader-contenedor.fade-out{
+    top:-110%;
+    opacity:0;
+}
+/* fin del loader */
+
+/* Inicio estilos de seccion nosotros */
+.container2{
+    width: 100%;
+    max-width: 1600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+.container2 .card{
+    background:#ffffff  ;
+    width: 260px;
+    height: 260px;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 25px;
+    text-align: center;
+    transition: all 0.25s;
+    position: relative;
+    
+}
+.container2 .card:hover{
+transform: translateY(-15px);
+box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
+
+}
+.container2 .card img{
+    width: 260px;
+    height: 260px;
+    visibility: visible;
+    opacity: 1;
+    object-fit: cover;
+}
+.container2 .card h4{
+ font-weight: 600;
+ font-family: "Montserrat"; 
+ font-weight: normal;
+ font-size: 20px;
+ line-height: 24px;
+ color:#262626;
+ visibility: visible;
+ opacity: 1;
+ 
+
+}
+.container2 .card p{
+    padding: 0 1rem;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: "Source Sans Pro"; 
+    line-height: 15px;
+    color:#262626;
+    visibility: visible;
+    opacity: 1;
+}
+.titulo-Nosotros{
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    margin: 80px 0px 15px 0px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+.h3-nosotros{
+    font-family: "Source Sans Pro"; 
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: normal;
+    text-align: center;
+    margin: 20px 0;
+    color:#404040
+}
+.redes-sociales{
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    background: rgb(255, 255, 255);
+    height: 90px;
+    /*line-height: 260px;*/
+    width: 100%;
+    transition: all 500ms ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card:hover .redes-sociales{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 59, 12, 0.7);
+}
+
+.card:hover .redes-sociales a {
+    display: inline;
+    transition: all 500ms ease;
+}
+
+.redes-sociales a{
+    text-decoration: none;
+    padding: 5px;
+    font-size: 22px;
+    color: #ffffff;
+    transition: all 400ms ease;
+    display: none;
+}
+.redes-sociales div {
+    margin-top: 15px;
+}
+.redes-sociales a:hover{
+    color: #161516;
+}
+.card:hover h4{
+    
+    color: #ffffff;
+
+}
+.card:hover p{
+    color: #ffffff;
+   
+}
+/* fin estilos de seccion nosotros */
+
+/* inicio ubicacion */
+.contact{
+    margin-top: 30px;
+
+}
+
+.map{
+
+    margin-left: 110px;
+    flex:1 1 42rem;
+    margin-bottom: 60px;
+ 
+}
+.row{
+    width: 100%;
+    max-width: 1000px;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-left: 350px;
+
+}
+.titulo-ubicacion{
+    font-size: 40px;
+    font-weight: 300;
+    text-align: left;
+    left: 120px;
+    top: 120px;
+    position: relative;
+    font-family: "Open Sans";
+}
+.titulo-ubicacion2{
+    font-size: 18px;
+   
+    text-align: left;
+    left: 120px;
+    top: 120px;
+    position: relative;
+    font-family: "Open Sans Pro";
+}
+/* fin ubivacion*/
+
+/* estilos footer */
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+    background-color: rgb(54, 48, 48);
+ 
+   
+ 
+}
+
+.footer .box-container .box h3{
+    padding:.5rem 0;
+    font-size: 20px;
+    margin-left: 10px;
+    color:rgb(231, 228, 228);
+    font-family: "Open Sans";
+
+}
+
+.footer .box-container .box a{
+    display: block;
+    margin-left: 10px;
+    padding:.5rem 0;
+    font-size: 15px;
+    color:rgb(231, 228, 228);
+   
+}
+
+.footer .box-container .box a:hover{
+    color:rgb(231, 228, 228);
+    text-decoration: underline;
+}
+
+.footer .credit{
+   
+    text-align: center;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    font-size: 1.5rem;
+    color:rgb(231, 228, 228);
+    padding:.5rem;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    background-color: black;
+   
+    width: calc(100% + 1028px);
+   
+ 
+}
+
+.footer .credit span{
+    color:rgb(231, 228, 228);
+}
+/* fin estilos footer */
+
+/*mediaqueries para responsive desing*/
+@media screen and (max-width: 620px) {
+    .menu-secundario-container {
+        grid-auto-rows: 165px;
+        grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    }
+
+    .menu-secundario-item {
+        width: 400px;
+        height: 125px;
+    }
+
+    .menu-secundario-item img {
+        width: 200px;
+        height: 125px;
+    }
+
+    .menu-item-info {
+        width: 200px;
+        padding: 0px 0px 0px 15px;
+        font-size: 12px;
+    }
+
+    .menu-item-title {
+        font-size: 18px;
+    }
+}

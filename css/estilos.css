@@ -459,6 +459,84 @@ box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
 }
 /* fin estilos de seccion nosotros */
 
+/* inicio contact us */
+.contactUs {
+    margin: 50px 0px;
+}
+
+.contactUs-title{
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+}
+
+.contactUs-subtitle{
+    font-family: "Source Sans Pro"; 
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: normal;
+    text-align: center;
+    margin: 20px 0;
+    color: #EEEEEE
+}
+
+.contactUs-container {
+    background-image: url(../img/background-form.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 30px 0px;
+}
+
+.container-form-contact {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-form-contact input, textarea {
+    margin: 15px 0px;
+    padding: 5px;
+    font-family: Source Sans Pro;
+    font-size: 15px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: solid 1px #eeeeee;
+}
+
+.container-form-contact input:focus, textarea:focus {
+    outline: none;
+}
+
+.inptEmail, .inptName {
+    height: 35px;
+}
+
+.btn-contactUs {
+    width: 100%;
+    border: none;
+    background-color: white;
+    height: 40px;
+    border-radius: 5px;
+    font-family: Source Sans Pro;
+    font-weight: bold;
+    color: #432309;
+    font-size: 20px;
+    margin: 10px 0px;
+    transition: 0.5s;
+}
+
+.btn-contactUs:hover {
+    background-color: #CCCCCC;
+    transition: 0.5s;
+}
+
+/* fin contact us */
+
 /* inicio ubicacion */
 .contact{
     margin-top: 30px;

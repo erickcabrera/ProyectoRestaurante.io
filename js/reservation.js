@@ -1,4 +1,11 @@
 window.onload = () => {
+    //guardamos ub objt de reservaciones en localStorage
+    if (localStorage.getItem("reservaciones") === null) {
+        localStorage.setItem("reservaciones", JSON.stringify([]));
+    }
+
+    //mostramos reservaciones guardadas
+    renderReservations();
 
     //utilizamos propagación de evento para que todos los botones de cantidad de personas
     //respondan a un evento click
@@ -61,29 +68,16 @@ function addNewReservation(data) {
     const date = new Date(data.get('fecha'));
     const formatToDate = date.toLocaleDateString('en-US');
 
-    let templete = `
-        <div class="reservation-item">
-            <img src="../img/restaurantfoodicon.jpg" alt="food icon">
-            <div class="reservation-info">
-                <span class="reservation-item-title">
-                    ${data.get('rbtnMesa')}
-                </span>
-                <span class="reservation-item-time">
-                    ${data.get('hora')}
-                </span>
-            </div>
-            <div class="reservation-info secundary-info">
-                <span class="reservation-item-date">
-                    ${formatToDate}
-                </span>
-                <span class="reservation-item-status">
-                    Pendiente
-                </span>
-            </div>
-        </div>
-    `;
+    let reservationObjt = {
+        mesa: data.get('rbtnMesa'),
+        hora: data.get('hora'),
+        fecha: formatToDate
+    }
 
-    document.getElementById('tableOfReservations').innerHTML += templete;
+    //guardamos los datos en el localStorage
+    let reservationsData = JSON.parse(localStorage.getItem('reservaciones'));
+    reservationsData.push(reservationObjt);
+    localStorage.setItem('reservaciones', JSON.stringify(reservationsData))
 
     Swal.fire({
         title: '¡Éxito!',
@@ -92,6 +86,40 @@ function addNewReservation(data) {
         confirmButtonColor: '#432309',
         confirmButtonText: 'Aceptar'
     })
+
+    renderReservations();
+}
+
+function renderReservations() {
+    let templete = '';
+    let reservations = JSON.parse(localStorage.getItem('reservaciones'));
+
+    for (const key in reservations) {
+        templete += `
+            <div class="reservation-item">
+                <img src="../img/restaurantfoodicon.jpg" alt="food icon">
+                <div class="reservation-info">
+                    <span class="reservation-item-title">
+                        ${reservations[key].mesa}
+                    </span>
+                    <span class="reservation-item-time">
+                        ${reservations[key].hora}
+                    </span>
+                </div>
+                <div class="reservation-info secundary-info">
+                    <span class="reservation-item-date">
+                        ${reservations[key].fecha}
+                    </span>
+                    <span class="reservation-item-status">
+                        Pendiente
+                    </span>
+                </div>
+            </div>
+        `;
+    }
+
+    document.getElementById('reservations-body').innerHTML = '';
+    document.getElementById('reservations-body').innerHTML += templete;
 }
 
 function cleanForm(form) {

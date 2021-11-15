@@ -30,3 +30,5 @@ Esta licencia permite que otros distribuyan, mezclen, adapten y construyan sobre
 - [mockups] https://www.figma.com/file/0ZXy22iWWujjF7JvbwQOCp/ProyectoLic?node-id=0%3A1
 - [Link_de_pagina_web] https://erickcabrera.github.io/ProyectoRestaurante.io/
 - [Video_Fase_2] https://drive.google.com/file/d/156wmWbPlRfIZwLeR3JZlo4Y9_x8uqWCn/view?usp=sharing
+- [Link Manual de Uusario] https://drive.google.com/file/d/1iaVtm8abwL893QSjsCSf9WezfN8hegfP/view?usp=sharing
+- [Link Manual Técnico] https://drive.google.com/file/d/1FWyexbqwYvV8_LE-Qa29pYAybr5VSy6r/view?usp=sharing

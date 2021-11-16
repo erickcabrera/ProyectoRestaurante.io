@@ -662,6 +662,73 @@ box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
 
 
 /*mediaqueries para responsive desing*/
+/* ---- ---- MEDIA QUERIES ---- ----*/
+@media screen and (max-width: 800px) {
+    header .contenedor .menu .menu-logo {
+        display: none;
+    }
+    header .contenedor {
+        position: static;
+        height: auto;
+    }
+    header .textos {
+        position: static;
+        margin: 100px 0;
+    }
+    header .menu {
+        text-align: center;
+    }
+    header .nombre {
+        margin-top: 60px !important;
+    }
+    header .menu a {
+        margin: 10px 20px;
+    }
+    header .textos .nombre {
+        font-size: 30px;
+    }
+    header .textos h3 {
+        font-size: 18px;
+    }
+    .main .acerca-de .foto {
+        width: 100%;
+        position: relative;
+    }
+    .main .acerca-de article {
+        position: relative;
+        width: 100%;
+        top: -50px;
+        transform: translate(0px, 0);
+    }
+    .main .menu-comida {
+        padding-top: 300px;
+    }
+    .main .menu-comida .titulo {
+        margin: 0 0 20px 0;
+    }
+    .main .menu-comida article {
+        width: 100%;
+    }
+    .main .galeria .foto {
+        width: 50%;
+    }
+}
+  
+@media screen and (max-width: 540px) {
+    .main .acerca-de article h3 {
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+    .main .menu-comida article .nombre,
+    .main .menu-comida article .precio {
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .main .menu-comida article .nombre {
+        width: 50%;
+    }
+}
+
 @media screen and (max-width: 620px) {
     .menu-secundario-container {
         grid-auto-rows: 165px;
